@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	  <meta name="description" content="A website about itb history">
+  <meta name="keywords" content="ITB, history, story, Institute of Technology, Blanchardstown">
+<title>Maps of Blanchardstown</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+<div id="container">
+	<header><h2><img src="images/logo.png" alt="logo" height="100px"> Institute of Technology, Blanchardstown</h2></header>
+<nav class="clearfix">
+<ul class="clearfix">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About us</a></li>
+	<li><a href="ecology.html">Ecology</a></li>
+  <li><a href="itbhistory.html">ITB history</a></li>
+  <li><a href="localhistory.html">Local history</a></li>
+<li><a href="mapsitb.html">Maps of ITB</a></li>
+	<li><a class="active"  href="mapsblanch.html">Maps of Blanchardstown</a></li>
+	<li><a href="mapsdublin.html">Maps of Dublin</a></li>
+</ul>
+	<a href="#" id="pull">Menu</a>
+	</nav>
+	
+	<div class="content">
+	<h2>Maps of Blanchardstown area</h2>
+	<p>Blanchardstown changed a lot over the last 15 or so years. Many new housing areas were built, as well as schools. Here you can see and compare the improvements. The following are maps from 1995, 2000 and 2005.<br><br>
+</p>
+		<img src="images/blanchmap.png" alt="Map of blanch from 1995">
+		<img src="images/blanchmap2000.png" alt="Map of blanch from 2000">
+		<img src="images/blanchmap2005.png" alt="Map of blanch from 2005">
+	</div>
+	
+	
+	<footer>
+		<div id="col1">
+			<h2>Useful Links</h2>
+		<ul>
+			<li><a href="sitemap.html">Sitemap</a></li>
+			<li><a href="http://www.itb.ie/" target="_blank">ITB website</a></li>
+			<li><a href="https://www.tu4dublin.ie" target="_blank">TU Dublin website</a></li>
+			</ul>
+		</div>
+		<div id="col2">
+		<h2>ITB information</h2>
+	<p>Institute of Technology Blanchardstown, <br>Blanchardstown Road North, <br>Dublin 15,D15 YV78</p>
+			</div>
+	<p id="credits">&copy; Made by Andrej Liapin, B00106619.</p>
+	</footer>
+</div>
+</body>
+</html>
